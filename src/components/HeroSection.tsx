@@ -67,7 +67,7 @@ export default function HeroSection() {
         >
           <a
             href="#join"
-            className="bg-foreground text-background px-8 py-4 rounded-full font-bold text-base hover:bg-lavender hover:text-primary-foreground transition-colors"
+            className="bg-lavender text-primary-foreground px-8 py-4 rounded-full font-bold text-base hover:bg-foreground hover:text-background transition-colors"
           >
             Join the Movement
           </a>
