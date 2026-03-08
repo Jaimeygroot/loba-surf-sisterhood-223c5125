@@ -5,6 +5,8 @@ import oceanTexture from "@/assets/ocean-texture.jpg";
 import BookingDialog from "./BookingDialog";
 
 export default function FinalCTASection() {
+  const [bookingOpen, setBookingOpen] = useState(false);
+
   return (
     <section
       id="join"
@@ -34,11 +36,16 @@ export default function FinalCTASection() {
           <Link to="/online-learning" className="bg-primary-foreground text-foreground px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity">
             Join the Movement
           </Link>
-          <button className="border border-primary-foreground/40 text-primary-foreground px-8 py-4 rounded-full font-semibold hover:bg-primary-foreground/10 transition-colors">
+          <button
+            onClick={() => setBookingOpen(true)}
+            className="border border-primary-foreground/40 text-primary-foreground px-8 py-4 rounded-full font-semibold hover:bg-primary-foreground/10 transition-colors"
+          >
             Book a First Session
           </button>
         </div>
       </motion.div>
+
+      <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
     </section>
   );
 }
