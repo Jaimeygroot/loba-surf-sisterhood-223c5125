@@ -8,7 +8,7 @@ export default function HeroSection() {
       <img
         src={heroBg}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover object-[30%_center]"
+        className="absolute inset-0 w-full h-full object-cover object-[30%_20%]"
       />
 
       {/* Overlay */}
@@ -38,7 +38,7 @@ export default function HeroSection() {
         >
           Loba Girls
           <br />
-          <span className="text-lavender">Surf Club</span>
+          <span className="text-primary-foreground">Surf Club</span>
         </motion.h1>
 
         <motion.p
@@ -67,7 +67,7 @@ export default function HeroSection() {
         >
           <a
             href="#join"
-            className="bg-foreground text-background px-8 py-4 rounded-full font-bold text-base hover:bg-lavender hover:text-primary-foreground transition-colors"
+            className="bg-lavender text-primary-foreground px-8 py-4 rounded-full font-bold text-base hover:bg-foreground hover:text-background transition-colors"
           >
             Join the Movement
           </a>
