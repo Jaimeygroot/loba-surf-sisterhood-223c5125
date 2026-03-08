@@ -23,9 +23,15 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const navigate = useNavigate();
+
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
-    if (location.pathname !== "/" && href.startsWith("/#")) {
+    if (!href.startsWith("/#")) {
+      navigate(href);
+      return;
+    }
+    if (location.pathname !== "/") {
       window.location.href = href;
       return;
     }
