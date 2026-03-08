@@ -10,7 +10,6 @@ const navItems = [
   { label: "Online Coaching", href: "/#coaching" },
   { label: "Forecast", href: "/#forecast" },
   { label: "Book a Session", href: "booking" },
-  { label: "Meet-Up App", href: "/#meetup" },
   { label: "About", href: "/our-mission" },
 ];
 
