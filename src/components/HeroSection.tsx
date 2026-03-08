@@ -67,13 +67,13 @@ export default function HeroSection() {
         >
           <a
             href="#join"
-            className="bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-semibold text-base hover:opacity-90 transition-opacity"
+            className="bg-foreground text-background px-8 py-4 rounded-full font-bold text-base hover:bg-lavender hover:text-primary-foreground transition-colors"
           >
             Join the Movement
           </a>
           <a
             href="#coaching"
-            className="border border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-full font-semibold text-base hover:bg-primary-foreground/10 transition-colors"
+            className="bg-foreground text-background px-8 py-4 rounded-full font-bold text-base hover:bg-lavender hover:text-primary-foreground transition-colors"
           >
             Online Coaching
           </a>
