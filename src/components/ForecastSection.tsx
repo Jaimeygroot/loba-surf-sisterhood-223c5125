@@ -14,7 +14,7 @@ export default function ForecastSection() {
       <div className="max-w-6xl mx-auto text-center">
         <ScrollReveal>
           <span className="text-sm font-semibold tracking-widest uppercase text-primary">
-            Forecast Training
+            Forecast Reading
           </span>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4">
             Learn to Read the Ocean
