@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, CloudSun, Flame, TrendingUp, Dumbbell } from "lucide-react";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LeadDialog from "@/components/LeadDialog";
 import oceanTexture from "@/assets/ocean-texture.jpg";
 
 const features = [
@@ -35,10 +36,11 @@ const features = [
 ];
 
 export default function OnlineLearning() {
+  const [leadOpen, setLeadOpen] = useState(false);
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
-    <div className="min-h-screen">
+    <div id="top-online" className="min-h-screen">
       <Header />
 
       {/* Hero */}
@@ -106,16 +108,27 @@ export default function OnlineLearning() {
           <p className="mt-6 text-lg text-primary-foreground/70 max-w-xl mx-auto">
             Join the LOBA community and get access to all coaching tools.
           </p>
-          <Link
-            to="/#join"
+          <button
+            onClick={() => setLeadOpen(true)}
             className="inline-block mt-10 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity"
           >
             Join the Pack
-          </Link>
+          </button>
         </ScrollReveal>
       </section>
 
+      {/* Home button */}
+      <div className="bg-background px-6 py-4">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+        >
+          ↑ Back to top
+        </button>
+      </div>
+
       <Footer />
+      <LeadDialog open={leadOpen} onOpenChange={setLeadOpen} />
     </div>
   );
 }
