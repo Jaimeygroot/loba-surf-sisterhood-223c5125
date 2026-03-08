@@ -186,6 +186,17 @@ function MissionTab() {
                 </p>
               </div>
             </ScrollReveal>
+
+            <ScrollReveal>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="overflow-hidden rounded-3xl">
+                  <img src={skateBowl} alt="Skateboarding in a bowl" className="w-full h-[300px] object-cover" />
+                </div>
+                <div className="overflow-hidden rounded-3xl">
+                  <img src={kidsSurfing} alt="Kids surfing together" className="w-full h-[300px] object-cover" />
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
