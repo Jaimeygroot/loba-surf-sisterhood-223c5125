@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import SisterhoodSection from "@/components/SisterhoodSection";
+import MissionSection from "@/components/MissionSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import CoachingSection from "@/components/CoachingSection";
 import ForecastSection from "@/components/ForecastSection";
