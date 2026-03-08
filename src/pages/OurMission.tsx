@@ -225,7 +225,7 @@ export default function OurMission() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-sm font-semibold tracking-widest uppercase text-secondary">
-              Our Story
+              How It All Started
             </span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4">
               How In-Water Trauma Transformed Into a Conscious Movement
