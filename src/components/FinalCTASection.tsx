@@ -1,12 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import oceanTexture from "@/assets/ocean-texture.jpg";
 import BookingDialog from "./BookingDialog";
-import LeadDialog from "./LeadDialog";
 
 export default function FinalCTASection() {
   const [bookingOpen, setBookingOpen] = useState(false);
-  const [leadOpen, setLeadOpen] = useState(false);
 
   return (
     <section
@@ -34,12 +33,9 @@ export default function FinalCTASection() {
           Join the LOBA Girls Surf Club and become part of a surf sisterhood that grows together in and out of the water.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-          <button
-            onClick={() => setLeadOpen(true)}
-            className="bg-primary-foreground text-foreground px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity"
-          >
+          <Link to="/online-learning" className="bg-primary-foreground text-foreground px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity">
             Join the Movement
-          </button>
+          </Link>
           <button
             onClick={() => setBookingOpen(true)}
             className="border border-primary-foreground/40 text-primary-foreground px-8 py-4 rounded-full font-semibold hover:bg-primary-foreground/10 transition-colors"
@@ -50,7 +46,6 @@ export default function FinalCTASection() {
       </motion.div>
 
       <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
-      <LeadDialog open={leadOpen} onOpenChange={setLeadOpen} />
     </section>
   );
 }
