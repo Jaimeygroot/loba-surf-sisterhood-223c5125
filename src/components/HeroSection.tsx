@@ -8,11 +8,11 @@ export default function HeroSection() {
       <img
         src={heroBg}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-[30%_center]"
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-deep-ocean/30 via-deep-ocean/20 to-deep-ocean/40" />
+      <div className="absolute inset-0 bg-gradient-to-b from-deep-ocean/10 via-transparent to-deep-ocean/20" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -38,7 +38,7 @@ export default function HeroSection() {
         >
           Loba Girls
           <br />
-          <span className="text-gradient">Surf Club</span>
+          <span className="text-lavender">Surf Club</span>
         </motion.h1>
 
         <motion.p
@@ -67,13 +67,13 @@ export default function HeroSection() {
         >
           <a
             href="#join"
-            className="bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-semibold text-base hover:opacity-90 transition-opacity"
+            className="bg-foreground text-background px-8 py-4 rounded-full font-bold text-base hover:bg-lavender hover:text-primary-foreground transition-colors"
           >
             Join the Movement
           </a>
           <a
             href="#coaching"
-            className="border border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-full font-semibold text-base hover:bg-primary-foreground/10 transition-colors"
+            className="bg-foreground text-background px-8 py-4 rounded-full font-bold text-base hover:bg-lavender hover:text-primary-foreground transition-colors"
           >
             Online Coaching
           </a>

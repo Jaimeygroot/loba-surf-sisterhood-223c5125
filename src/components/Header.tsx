@@ -44,10 +44,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-3">
-          <img src={lobaLogo} alt="LOBA Girls Surf Club" className="h-16 w-16 md:h-20 md:w-20 rounded-full" />
-          <span className="font-heading font-bold text-lg tracking-tight text-foreground">
-            LOBA
-          </span>
+          <img src={lobaLogo} alt="LOBA Girls Surf Club" className="h-12 w-12 md:h-14 md:w-14 rounded-full" />
         </Link>
 
         {/* Desktop nav */}
