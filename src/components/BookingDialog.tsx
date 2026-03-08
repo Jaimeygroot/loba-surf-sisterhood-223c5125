@@ -37,7 +37,7 @@ export default function BookingDialog({ open, onOpenChange }: BookingDialogProps
   const [people, setPeople] = useState("");
   const [date, setDate] = useState<Date>();
   const [experience, setExperience] = useState("");
-  const [sending, setSending] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,13 +52,21 @@ export default function BookingDialog({ open, onOpenChange }: BookingDialogProps
     );
     window.open(`mailto:lobasurf@gmail.com?subject=${subject}&body=${body}`, "_self");
 
-    toast.success("Opening your email client...");
-    onOpenChange(false);
-    setName("");
-    setEmail("");
-    setPeople("");
-    setDate(undefined);
-    setExperience("");
+    setSubmitted(true);
+  };
+
+  const handleClose = (value: boolean) => {
+    onOpenChange(value);
+    if (!value) {
+      setTimeout(() => {
+        setSubmitted(false);
+        setName("");
+        setEmail("");
+        setPeople("");
+        setDate(undefined);
+        setExperience("");
+      }, 300);
+    }
   };
 
   return (
