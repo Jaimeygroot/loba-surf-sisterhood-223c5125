@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 import sisterhoodImg from "@/assets/sisterhood.jpg";
 
@@ -32,6 +33,12 @@ export default function SisterhoodSection() {
               "When women surf together, they surf stronger."
             </p>
           </blockquote>
+          <Link
+            to="/our-mission"
+            className="inline-block mt-8 bg-lavender text-primary-foreground px-8 py-4 rounded-full font-bold text-base hover:bg-foreground hover:text-background transition-colors"
+          >
+            Story &amp; Mission
+          </Link>
         </ScrollReveal>
       </div>
     </section>
