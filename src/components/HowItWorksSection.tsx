@@ -14,7 +14,7 @@ const steps = [
   },
   {
     icon: Users,
-    title: "Weekly Surf Sessions",
+    title: "Weekly Sessions",
     items: ["Water coaching", "Community vibe", "Faster progression"],
   },
 ];
