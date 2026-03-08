@@ -60,10 +60,8 @@ function StoryTab() {
                 At a local surf spot where I had felt safe for years, something happened that shook me deeply. I paddled for a wave when a man suddenly dropped in at the last moment. He came straight toward me. He saw me. He didn't stop. The nose of his board punched straight through the nose of mine, and when he fell, he pushed me underwater.
               </p>
               <p>
-                On the beach, instead of apologizing, he started yelling at me and refused to pay for the damage. In the weeks after, I saw him in the water several times. To him, the situation seemed forgotten. To me, it was traumatic.
-              </p>
-              <p className="font-heading italic text-foreground text-xl">
-                But it was also transformative.
+              <p>
+                On the beach, instead of apologizing, he started yelling at me and refused to pay for the damage. In the weeks after, I saw him in the village several times. We were in the same community. To him, the situation seemed forgotten. To me, it was traumatic. But it was also transformative.
               </p>
             </div>
           </ScrollReveal>
