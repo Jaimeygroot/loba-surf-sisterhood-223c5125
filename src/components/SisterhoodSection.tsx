@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
-import sisterhoodImg from "@/assets/sisterhood.jpg";
+import sisterhoodImg from "@/assets/power-of-pack.jpg";
 
 export default function SisterhoodSection() {
   return (
