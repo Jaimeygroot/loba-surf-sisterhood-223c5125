@@ -28,7 +28,10 @@ function StoryTab() {
                 In 2013, I became the Dutch vice champion in longboarding.
               </p>
               <p>
-                Over the years, surfing took me around the world. I've taught surf lessons for many different schools since 2010 in the Netherlands, France, Spain, Portugal, and Panama. My parents took us to Bali in 2009 and after that I knew one thing for sure: I wanted to travel more places like this. I traveled to Central America and through Europe, chasing waves and learning from different surf cultures and eventually fell in love with the Algarve, Portugal.
+                My parents took us to Bali in 2009 and after that I knew one thing for sure: I wanted to travel more places like this. I traveled to Central America and through Europe, chasing waves and learning from different surf cultures and eventually fell in love with the Algarve, Portugal.
+              </p>
+              <p>
+                Over the years, surfing took me around the world. I've been a surfguide for many different schools since 2010 in the Netherlands, France, Spain, Portugal, and Panama.
               </p>
             </div>
           </ScrollReveal>
