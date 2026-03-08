@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import lobaLogo from "@/assets/loba-logo.png";
 
 const navItems = [
+  { label: "Home", href: "/#top" },
   { label: "Online Coaching", href: "/#coaching" },
   { label: "Forecast", href: "/#forecast" },
   { label: "Book a Session", href: "/#sessions" },

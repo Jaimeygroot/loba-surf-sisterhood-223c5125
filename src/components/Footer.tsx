@@ -41,10 +41,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-background/10 text-center">
+        <div className="mt-12 pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-background/40">
             © {new Date().getFullYear()} LOBA Girls Surf Club. All rights reserved.
           </p>
+          <a
+            href="mailto:lobasurf@gmail.com"
+            className="text-sm text-background/60 hover:text-background transition-colors"
+          >
+            lobasurf@gmail.com
+          </a>
         </div>
       </div>
     </footer>

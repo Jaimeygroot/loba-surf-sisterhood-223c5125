@@ -36,6 +36,15 @@ export default function ForecastSection() {
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delay={0.5}>
+          <a
+            href="/online-learning"
+            className="inline-block mt-12 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity"
+          >
+            Online Academy
+          </a>
+        </ScrollReveal>
       </div>
     </section>
   );
