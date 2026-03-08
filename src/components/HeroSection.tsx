@@ -8,7 +8,7 @@ export default function HeroSection() {
       <img
         src={heroBg}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover object-[30%_center]"
+        className="absolute inset-0 w-full h-full object-cover object-[30%_20%]"
       />
 
       {/* Overlay */}
