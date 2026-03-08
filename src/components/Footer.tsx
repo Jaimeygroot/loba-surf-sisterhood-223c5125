@@ -2,6 +2,7 @@ import { Instagram, Youtube } from "lucide-react";
 import lobaLogo from "@/assets/loba-logo.png";
 
 const links = [
+  { label: "Home", href: "/#top" },
   { label: "Online Coaching", href: "#coaching" },
   { label: "Forecast", href: "#forecast" },
   { label: "Book a Session", href: "#sessions" },
