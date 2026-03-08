@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import lobaLogo from "@/assets/loba-logo.png";
@@ -9,7 +9,7 @@ const navItems = [
   { label: "Forecast", href: "/#forecast" },
   { label: "Book a Session", href: "/#sessions" },
   { label: "Meet-Up App", href: "/#meetup" },
-  { label: "About", href: "/#about" },
+  { label: "About", href: "/our-mission" },
 ];
 
 export default function Header() {
@@ -23,9 +23,15 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const navigate = useNavigate();
+
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
-    if (location.pathname !== "/" && href.startsWith("/#")) {
+    if (!href.startsWith("/#")) {
+      navigate(href);
+      return;
+    }
+    if (location.pathname !== "/") {
       window.location.href = href;
       return;
     }
