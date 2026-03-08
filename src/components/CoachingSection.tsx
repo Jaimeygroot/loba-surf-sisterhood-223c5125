@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { Play, BarChart3, BookOpen } from "lucide-react";
+import { Play, BarChart3, BookOpen, Target } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const features = [
+  { icon: Target, label: "Surf Practices" },
   { icon: Play, label: "Video Analysis" },
   { icon: BookOpen, label: "Forecast Reading" },
   { icon: BarChart3, label: "Progress Tracking" },
