@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import oceanTexture from "@/assets/ocean-texture.jpg";
 import BookingDialog from "./BookingDialog";
-import oceanTexture from "@/assets/ocean-texture.jpg";
 
 export default function FinalCTASection() {
   return (
