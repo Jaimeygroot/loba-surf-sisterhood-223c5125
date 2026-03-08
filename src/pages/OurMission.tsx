@@ -28,7 +28,10 @@ function StoryTab() {
                 In 2013, I became the Dutch vice champion in longboarding.
               </p>
               <p>
-                Over the years, surfing took me around the world. I've taught surf lessons for many different schools since 2010 in the Netherlands, France, Spain, Portugal, and Panama. My parents took us to Bali in 2009 and after that I knew one thing for sure: I wanted to travel more places like this. I traveled to Central America and through Europe, chasing waves and learning from different surf cultures and eventually fell in love with the Algarve, Portugal.
+                My parents took us to Bali in 2009 and after that I knew one thing for sure: I wanted to travel more places like this. I traveled to Central America and through Europe, chasing waves and learning from different surf cultures and eventually fell in love with the Algarve, Portugal.
+              </p>
+              <p>
+                Over the years, surfing took me around the world. I've been a surfguide for many different schools since 2010 in the Netherlands, France, Spain, Portugal, and Panama.
               </p>
             </div>
           </ScrollReveal>
@@ -57,10 +60,7 @@ function StoryTab() {
                 At a local surf spot where I had felt safe for years, something happened that shook me deeply. I paddled for a wave when a man suddenly dropped in at the last moment. He came straight toward me. He saw me. He didn't stop. The nose of his board punched straight through the nose of mine, and when he fell, he pushed me underwater.
               </p>
               <p>
-                On the beach, instead of apologizing, he started yelling at me and refused to pay for the damage. In the weeks after, I saw him in the water several times. To him, the situation seemed forgotten. To me, it was traumatic.
-              </p>
-              <p className="font-heading italic text-foreground text-xl">
-                But it was also transformative.
+                On the beach, instead of apologizing, he started yelling at me and refused to pay for the damage. In the weeks after, I saw him in the village several times. We were in the same community. To him, the situation seemed forgotten. To me, it was traumatic. But it was also transformative.
               </p>
             </div>
           </ScrollReveal>
