@@ -18,7 +18,7 @@ export default function CoachingSection() {
             Online Coaching
           </span>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground mt-4">
-            Train Like a Surfer — Anywhere
+            Train As You Like — Anywhere
           </h2>
           <p className="mt-6 text-lg text-secondary-foreground/80 max-w-2xl mx-auto">
             Members get access to a digital surf training platform with coaching tools designed to accelerate your progression.
