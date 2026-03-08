@@ -58,6 +58,8 @@ const levels = [
 ];
 
 export default function Academy() {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   return (
     <div className="min-h-screen">
       <Header />
