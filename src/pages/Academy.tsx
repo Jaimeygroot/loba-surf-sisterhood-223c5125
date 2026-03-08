@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Play, Target, BarChart3, BookOpen, Users, Video, Waves, Award } from "lucide-react";
 import { motion } from "framer-motion";
@@ -58,6 +59,8 @@ const levels = [
 ];
 
 export default function Academy() {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   return (
     <div className="min-h-screen">
       <Header />
