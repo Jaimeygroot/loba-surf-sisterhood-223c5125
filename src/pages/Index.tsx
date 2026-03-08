@@ -7,7 +7,7 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import CoachingSection from "@/components/CoachingSection";
 import ForecastSection from "@/components/ForecastSection";
 import SessionsSection from "@/components/SessionsSection";
-import MeetupSection from "@/components/MeetupSection";
+
 import ConsciousSection from "@/components/ConsciousSection";
 import ProgressionSection from "@/components/ProgressionSection";
 import ResultsSection from "@/components/ResultsSection";
