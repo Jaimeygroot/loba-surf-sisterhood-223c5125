@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <section id="top" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Vimeo background video */}
       <div className="absolute inset-0 z-0">
         <iframe
@@ -63,7 +63,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-6 text-lg md:text-xl text-primary-foreground max-w-2xl mx-auto leading-relaxed bg-foreground/30 backdrop-blur-sm px-6 py-3 rounded-full inline-block"
+          className="mt-3 text-lg md:text-xl text-primary-foreground/60 uppercase tracking-widest font-medium bg-lavender/15 px-6 py-3 rounded-full inline-block"
         >
           Join the movement of conscious surfing.
         </motion.p>

@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { CalendarCheck, Heart, TrendingUp } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import BookingDialog from "./BookingDialog";
 
 export default function SessionsSection() {
+  const [bookingOpen, setBookingOpen] = useState(false);
+
   return (
     <section id="sessions" className="section-padding bg-secondary/10">
       <div className="max-w-5xl mx-auto text-center">
@@ -35,14 +39,16 @@ export default function SessionsSection() {
         </div>
 
         <ScrollReveal delay={0.4}>
-          <a
-            href="#join"
+          <button
+            onClick={() => setBookingOpen(true)}
             className="inline-block mt-12 bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity"
           >
             Book a Session
-          </a>
+          </button>
         </ScrollReveal>
       </div>
+
+      <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
     </section>
   );
 }
