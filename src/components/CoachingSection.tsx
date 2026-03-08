@@ -4,8 +4,8 @@ import ScrollReveal from "./ScrollReveal";
 
 const features = [
   { icon: Play, label: "Video Analysis" },
-  { icon: BookOpen, label: "Technique Tutorials" },
-  { icon: Target, label: "Surf Drills" },
+  { icon: BookOpen, label: "Forecast Reading" },
+  { icon: Target, label: "Surf Practices & Techniques" },
   { icon: BarChart3, label: "Progress Tracking" },
 ];
 
