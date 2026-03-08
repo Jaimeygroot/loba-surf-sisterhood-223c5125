@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
-import aboutImg from "@/assets/about-surfer.jpg";
+import coachGirl from "@/assets/coach-girl.jpg";
 
 export default function AboutSection() {
   return (
@@ -21,13 +23,20 @@ export default function AboutSection() {
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
             Online learning gives you knowledge of the ocean, techniques and home practices. Weekly sessions turn that knowledge into real skills.
           </p>
+          <Link
+            to="/our-mission"
+            className="mt-8 inline-flex items-center gap-2 bg-lavender text-primary-foreground px-6 py-3 rounded-full font-bold text-sm hover:bg-foreground hover:text-background transition-colors"
+          >
+            Read More About Our Mission
+            <ArrowRight size={16} />
+          </Link>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="overflow-hidden rounded-3xl">
+          <div className="overflow-hidden rounded-3xl relative">
             <img
-              src={aboutImg}
-              alt="LOBA surfer at sunset"
+              src={coachGirl}
+              alt="LOBA coach with young surfer"
               className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
             />
           </div>
