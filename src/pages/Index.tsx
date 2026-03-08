@@ -1,12 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import PhilosophySection from "@/components/PhilosophySection";
+import SisterhoodSection from "@/components/SisterhoodSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import CoachingSection from "@/components/CoachingSection";
+import ForecastSection from "@/components/ForecastSection";
+import SessionsSection from "@/components/SessionsSection";
+import MeetupSection from "@/components/MeetupSection";
+import ConsciousSection from "@/components/ConsciousSection";
+import ProgressionSection from "@/components/ProgressionSection";
+import ResultsSection from "@/components/ResultsSection";
+import AboutSection from "@/components/AboutSection";
+import FinalCTASection from "@/components/FinalCTASection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Header />
+      <HeroSection />
+      <PhilosophySection />
+      <SisterhoodSection />
+      <HowItWorksSection />
+      <CoachingSection />
+      <ForecastSection />
+      <SessionsSection />
+      <ConsciousSection />
+      <ProgressionSection />
+      <MeetupSection />
+      <ResultsSection />
+      <AboutSection />
+      <FinalCTASection />
+      <Footer />
     </div>
   );
 };
