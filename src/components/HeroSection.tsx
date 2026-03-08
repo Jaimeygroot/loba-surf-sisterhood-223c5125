@@ -20,26 +20,32 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="flex items-center justify-center gap-6 md:gap-10"
         >
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-            {["Local Community", "Surf Guiding", "Online Coaching", "Women Only"].map((tag) => (
-              <span key={tag} className="px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase bg-secondary/20 text-primary-foreground border border-secondary/30">
-                {tag}
-              </span>
-            ))}
+          {/* Left tags */}
+          <div className="flex flex-col items-end gap-1">
+            <span className="text-xs font-semibold tracking-widest uppercase text-primary-foreground/70">Women Only</span>
+            <span className="text-xs font-semibold tracking-widest uppercase text-primary-foreground/70">Surf Guiding</span>
+          </div>
+
+          {/* Title */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-[0.95] tracking-tight"
+          >
+            Loba Girls
+            <br />
+            Surf Club
+          </motion.h1>
+
+          {/* Right tags */}
+          <div className="flex flex-col items-start gap-1">
+            <span className="text-xs font-semibold tracking-widest uppercase text-primary-foreground/70">Local Community</span>
+            <span className="text-xs font-semibold tracking-widest uppercase text-primary-foreground/70">Online Coaching</span>
           </div>
         </motion.div>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-[0.95] tracking-tight"
-        >
-          Loba Girls
-          <br />
-          <span className="text-primary-foreground">Surf Club</span>
-        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
