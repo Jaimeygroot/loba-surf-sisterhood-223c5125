@@ -38,7 +38,7 @@ export default function HeroSection() {
         >
           Loba Girls
           <br />
-          <span className="text-gradient">Surf Club</span>
+          <span className="text-lavender">Surf Club</span>
         </motion.h1>
 
         <motion.p
