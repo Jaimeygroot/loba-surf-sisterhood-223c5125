@@ -14,12 +14,12 @@ const modules = [
   },
   {
     icon: BookOpen,
-    title: "Technique Tutorials",
-    desc: "Step-by-step video lessons covering pop-up, bottom turn, cutback, and more.",
+    title: "Forecast Reading",
+    desc: "Learn to read surf forecasts, understand swell, wind and tide conditions.",
   },
   {
     icon: Target,
-    title: "Surf Drills",
+    title: "Surf Practices & Techniques",
     desc: "Land-based exercises designed to improve your balance, strength and surf-specific fitness.",
   },
   {

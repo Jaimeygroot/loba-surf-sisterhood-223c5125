@@ -5,7 +5,7 @@ const steps = [
   {
     icon: Video,
     title: "Online Coaching",
-    items: ["Technique breakdowns", "Surf drills", "Video feedback"],
+    items: ["Technique breakdowns", "Surf practices", "Video feedback"],
   },
   {
     icon: CloudSun,
