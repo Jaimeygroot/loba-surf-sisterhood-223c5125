@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Play, BarChart3, BookOpen, Target } from "lucide-react";
+import { Play, BarChart3, BookOpen, Target, MapPin, Calendar } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const features = [
@@ -7,6 +7,8 @@ const features = [
   { icon: Play, label: "Video Analysis" },
   { icon: BookOpen, label: "Forecast Reading" },
   { icon: BarChart3, label: "Progress Tracking" },
+  { icon: MapPin, label: "Find Surf Sisters" },
+  { icon: Calendar, label: "Meet-Up Coordination" },
 ];
 
 export default function CoachingSection() {
@@ -21,11 +23,11 @@ export default function CoachingSection() {
             Train As You Like — Anywhere
           </h2>
           <p className="mt-6 text-lg text-secondary-foreground/80 max-w-2xl mx-auto">
-            Members get access to a digital surf training platform with coaching tools designed to accelerate your progression.
+            Members get access to a digital surf training platform with coaching tools designed to accelerate your progression — and connect with your surf sisters through the built-in Meet-Up feature.
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-14">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-14">
           {features.map((f, i) => (
             <ScrollReveal key={i} delay={0.1 * i}>
               <div className="bg-secondary-foreground/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-secondary-foreground/20">

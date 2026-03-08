@@ -29,7 +29,7 @@ const Index = () => {
       <SessionsSection />
       <ConsciousSection />
       <ProgressionSection />
-      <MeetupSection />
+      
       <ResultsSection />
       <AboutSection />
       <FinalCTASection />
