@@ -160,11 +160,6 @@ function MissionTab() {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal>
-              <div className="overflow-hidden rounded-3xl">
-                <img src={coachGirl} alt="LOBA coach with young surfer" className="w-full h-[350px] object-cover" />
-              </div>
-            </ScrollReveal>
 
             <ScrollReveal>
               <div className="space-y-4">
