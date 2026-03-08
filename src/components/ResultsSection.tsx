@@ -1,10 +1,10 @@
 import ScrollReveal from "./ScrollReveal";
 
 const stats = [
-  { value: "300+", label: "Members" },
-  { value: "2×", label: "Faster Progression" },
+  { value: "50+", label: "Members" },
+  { value: "5×", label: "Faster Progression" },
   { value: "Weekly", label: "Surf Sessions" },
-  { value: "Growing", label: "International Community" },
+  { value: "Online", label: "Coaching" },
 ];
 
 export default function ResultsSection() {

@@ -19,7 +19,7 @@ export default function AboutSection() {
             The surfer is like the wolf — she listens to the environment, moves with nature, and trusts her instincts.
           </p>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            Online learning gives you knowledge of the ocean. Weekly sessions turn that knowledge into real skills.
+            Online learning gives you knowledge of the ocean, techniques and home practices. Weekly sessions turn that knowledge into real skills.
           </p>
         </ScrollReveal>
 
