@@ -37,7 +37,7 @@ export default function BookingDialog({ open, onOpenChange }: BookingDialogProps
   const [people, setPeople] = useState("");
   const [date, setDate] = useState<Date>();
   const [experience, setExperience] = useState("");
-  const [sending, setSending] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,81 +52,113 @@ export default function BookingDialog({ open, onOpenChange }: BookingDialogProps
     );
     window.open(`mailto:lobasurf@gmail.com?subject=${subject}&body=${body}`, "_self");
 
-    toast.success("Opening your email client...");
-    onOpenChange(false);
-    setName("");
-    setEmail("");
-    setPeople("");
-    setDate(undefined);
-    setExperience("");
+    setSubmitted(true);
+  };
+
+  const handleClose = (value: boolean) => {
+    onOpenChange(value);
+    if (!value) {
+      setTimeout(() => {
+        setSubmitted(false);
+        setName("");
+        setEmail("");
+        setPeople("");
+        setDate(undefined);
+        setExperience("");
+      }, 300);
+    }
   };
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle className="font-heading text-2xl">Book a Session</DialogTitle>
-          <DialogDescription>Fill in the details and we'll get back to you.</DialogDescription>
-        </DialogHeader>
-        <form onSubmit={handleSubmit} className="space-y-4 mt-2">
-          <Input
-            placeholder="Your name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-          <Input
-            type="email"
-            placeholder="Your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <Select value={people} onValueChange={setPeople}>
-            <SelectTrigger>
-              <SelectValue placeholder="Number of people" />
-            </SelectTrigger>
-            <SelectContent>
-              {["1", "2", "3", "4", "5+"].map((n) => (
-                <SelectItem key={n} value={n}>{n} {n === "1" ? "person" : "people"}</SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button
-                variant="outline"
-                className={cn("w-full justify-start text-left font-normal", !date && "text-muted-foreground")}
-              >
-                <CalendarIcon className="mr-2 h-4 w-4" />
-                {date ? format(date, "PPP") : "Pick a date"}
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-auto p-0" align="start">
-              <Calendar
-                mode="single"
-                selected={date}
-                onSelect={setDate}
-                disabled={(d) => d < new Date()}
-                initialFocus
-                className="p-3 pointer-events-auto"
+        {submitted ? (
+          <div className="text-center py-8">
+            <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <DialogHeader>
+              <DialogTitle className="font-heading text-2xl">Thank you for reaching out!</DialogTitle>
+              <DialogDescription className="mt-3 text-base">
+                Your email has been received. We will get back to you within 24 hours.
+              </DialogDescription>
+            </DialogHeader>
+            <Button
+              onClick={() => handleClose(false)}
+              className="mt-8 bg-secondary text-secondary-foreground hover:opacity-90"
+            >
+              Close
+            </Button>
+          </div>
+        ) : (
+          <>
+            <DialogHeader>
+              <DialogTitle className="font-heading text-2xl">Book a Session</DialogTitle>
+              <DialogDescription>Fill in the details and we'll get back to you.</DialogDescription>
+            </DialogHeader>
+            <form onSubmit={handleSubmit} className="space-y-4 mt-2">
+              <Input
+                placeholder="Your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
               />
-            </PopoverContent>
-          </Popover>
-          <Select value={experience} onValueChange={setExperience}>
-            <SelectTrigger>
-              <SelectValue placeholder="Experience level" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="beginner">Beginner</SelectItem>
-              <SelectItem value="intermediate">Intermediate</SelectItem>
-              <SelectItem value="advanced">Advanced</SelectItem>
-            </SelectContent>
-          </Select>
-          <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:opacity-90">
-            Send Booking Request
-          </Button>
-        </form>
+              <Input
+                type="email"
+                placeholder="Your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <Select value={people} onValueChange={setPeople}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Number of people" />
+                </SelectTrigger>
+                <SelectContent>
+                  {["1", "2", "3", "4", "5+"].map((n) => (
+                    <SelectItem key={n} value={n}>{n} {n === "1" ? "person" : "people"}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className={cn("w-full justify-start text-left font-normal", !date && "text-muted-foreground")}
+                  >
+                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    {date ? format(date, "PPP") : "Pick a date"}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0" align="start">
+                  <Calendar
+                    mode="single"
+                    selected={date}
+                    onSelect={setDate}
+                    disabled={(d) => d < new Date()}
+                    initialFocus
+                    className="p-3 pointer-events-auto"
+                  />
+                </PopoverContent>
+              </Popover>
+              <Select value={experience} onValueChange={setExperience}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Experience level" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="beginner">Beginner</SelectItem>
+                  <SelectItem value="intermediate">Intermediate</SelectItem>
+                  <SelectItem value="advanced">Advanced</SelectItem>
+                </SelectContent>
+              </Select>
+              <Button type="submit" className="w-full bg-secondary text-secondary-foreground hover:opacity-90">
+                Send Booking Request
+              </Button>
+            </form>
+          </>
+        )}
       </DialogContent>
     </Dialog>
   );
