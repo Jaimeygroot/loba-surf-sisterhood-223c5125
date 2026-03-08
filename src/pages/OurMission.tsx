@@ -7,10 +7,11 @@ import Footer from "@/components/Footer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 import robinLane from "@/assets/robin-lane-graphics.jpg";
-import youngSurfers from "@/assets/young-surfers.jpg";
+import baliSurf from "@/assets/bali-surf.jpg";
 import beachCommunity from "@/assets/beach-community.jpg";
 import coachingOcean from "@/assets/coaching-ocean.jpg";
-import coachGirl from "@/assets/coach-girl.jpg";
+import skateBowl from "@/assets/skate-bowl.jpg";
+import kidsSurfing from "@/assets/kids-surfing.jpg";
 
 function StoryTab() {
   return (
@@ -33,7 +34,7 @@ function StoryTab() {
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <div className="overflow-hidden rounded-3xl">
-              <img src={youngSurfers} alt="Young surfers in the ocean" className="w-full h-[400px] lg:h-[500px] object-cover" />
+              <img src={baliSurf} alt="Surfing in Bali" className="w-full h-[400px] lg:h-[500px] object-cover" />
             </div>
           </ScrollReveal>
         </div>
@@ -159,11 +160,6 @@ function MissionTab() {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal>
-              <div className="overflow-hidden rounded-3xl">
-                <img src={coachGirl} alt="LOBA coach with young surfer" className="w-full h-[350px] object-cover" />
-              </div>
-            </ScrollReveal>
 
             <ScrollReveal>
               <div className="space-y-4">
@@ -188,6 +184,17 @@ function MissionTab() {
                 <p className="text-lg text-primary-foreground/80 leading-relaxed">
                   Together, these pillars of sisterhood, empowerment and conscious surfing form a comprehensive approach to improving women's experience of surfing. By addressing both the individual and collective aspects of the sport, we can create a more inclusive, supportive and environmentally conscious surfing community.
                 </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="overflow-hidden rounded-3xl">
+                  <img src={skateBowl} alt="Skateboarding in a bowl" className="w-full h-[300px] object-cover" />
+                </div>
+                <div className="overflow-hidden rounded-3xl">
+                  <img src={kidsSurfing} alt="Kids surfing together" className="w-full h-[300px] object-cover" />
+                </div>
               </div>
             </ScrollReveal>
           </div>
