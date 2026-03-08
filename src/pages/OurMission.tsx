@@ -34,7 +34,7 @@ function StoryTab() {
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <div className="overflow-hidden rounded-3xl">
-              <img src={youngSurfers} alt="Young surfers in the ocean" className="w-full h-[400px] lg:h-[500px] object-cover" />
+              <img src={baliSurf} alt="Surfing in Bali" className="w-full h-[400px] lg:h-[500px] object-cover" />
             </div>
           </ScrollReveal>
         </div>
