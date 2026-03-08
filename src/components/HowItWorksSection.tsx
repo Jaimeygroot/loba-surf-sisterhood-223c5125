@@ -9,7 +9,7 @@ const steps = [
   },
   {
     icon: CloudSun,
-    title: "Forecast Training",
+    title: "Forecast Reading",
     items: ["Swell & wind reading", "Tide timing", "Spot selection"],
   },
   {
