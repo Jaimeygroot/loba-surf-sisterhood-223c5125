@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import heroBg from "@/assets/hero-bg.png";
 
 export default function PhilosophySection() {
   const principles = [
@@ -10,17 +11,13 @@ export default function PhilosophySection() {
 
   return (
     <section id="philosophy" className="relative section-padding overflow-hidden">
-      {/* Vimeo background video */}
-      <div className="absolute inset-0 z-0">
-        <iframe
-          src="https://player.vimeo.com/video/956967522?h=758f3b5591&background=1&autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0"
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto"
-          style={{ aspectRatio: "16/9" }}
-          allow="autoplay; fullscreen"
-          frameBorder="0"
-        />
-        <div className="absolute inset-0 bg-foreground/60" />
-      </div>
+      {/* Background image */}
+      <img
+        src={heroBg}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover object-[30%_10%]"
+      />
+      <div className="absolute inset-0 bg-foreground/60" />
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         <ScrollReveal>
