@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <section id="top" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Vimeo background video */}
       <div className="absolute inset-0 z-0">
         <iframe
