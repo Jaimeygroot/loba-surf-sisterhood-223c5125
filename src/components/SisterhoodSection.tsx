@@ -1,0 +1,39 @@
+import ScrollReveal from "./ScrollReveal";
+import sisterhoodImg from "@/assets/sisterhood.jpg";
+
+export default function SisterhoodSection() {
+  return (
+    <section className="section-padding bg-muted">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <ScrollReveal>
+          <div className="overflow-hidden rounded-3xl">
+            <img
+              src={sisterhoodImg}
+              alt="LOBA surf sisterhood - women surfing together"
+              className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.2}>
+          <span className="text-sm font-semibold tracking-widest uppercase text-secondary">
+            Sisterhood
+          </span>
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mt-4">
+            The Power of the Pack
+          </h2>
+          <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+            LOBA is about surfing together, not alone. Women support each other
+            in the line-up, in the learning process, and in the ocean. When
+            women surf together, they surf stronger.
+          </p>
+          <blockquote className="mt-8 pl-6 border-l-4 border-secondary">
+            <p className="text-xl font-heading italic text-foreground">
+              "When women surf together, they surf stronger."
+            </p>
+          </blockquote>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
