@@ -21,9 +21,13 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase bg-secondary/20 text-primary-foreground border border-secondary/30 mb-8">
-            A local community for surf guiding and online coaching for women only
-          </span>
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+            {["Local Community", "Surf Guiding", "Online Coaching", "Women Only"].map((tag) => (
+              <span key={tag} className="px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase bg-secondary/20 text-primary-foreground border border-secondary/30">
+                {tag}
+              </span>
+            ))}
+          </div>
         </motion.div>
 
         <motion.h1
