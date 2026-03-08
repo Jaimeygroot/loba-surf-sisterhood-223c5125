@@ -3,7 +3,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function SessionsSection() {
   return (
-    <section id="sessions" className="section-padding bg-muted">
+    <section id="sessions" className="section-padding bg-secondary/10">
       <div className="max-w-5xl mx-auto text-center">
         <ScrollReveal>
           <span className="text-sm font-semibold tracking-widest uppercase text-secondary">
@@ -37,7 +37,7 @@ export default function SessionsSection() {
         <ScrollReveal delay={0.4}>
           <a
             href="#join"
-            className="inline-block mt-12 bg-foreground text-background px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity"
+            className="inline-block mt-12 bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity"
           >
             Book a Session
           </a>

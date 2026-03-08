@@ -44,7 +44,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-3">
-          <img src={lobaLogo} alt="LOBA Girls Surf Club" className="h-10 w-10 rounded-full" />
+          <img src={lobaLogo} alt="LOBA Girls Surf Club" className="h-16 w-16 md:h-20 md:w-20 rounded-full" />
           <span className="font-heading font-bold text-lg tracking-tight text-foreground">
             LOBA
           </span>
@@ -63,9 +63,9 @@ export default function Header() {
           ))}
           <button
             onClick={() => handleNavClick("/#join")}
-            className="bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
+            className="bg-secondary text-secondary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
           >
-            Join the Pack
+            Join the Movement
           </button>
         </nav>
 
@@ -99,9 +99,9 @@ export default function Header() {
               ))}
               <button
                 onClick={() => handleNavClick("/#join")}
-                className="bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-semibold mt-2"
+                className="bg-secondary text-secondary-foreground px-5 py-3 rounded-full text-sm font-semibold mt-2"
               >
-                Join the Pack
+                Join the Movement
               </button>
             </nav>
           </motion.div>
