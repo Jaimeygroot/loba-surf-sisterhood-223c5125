@@ -3,7 +3,7 @@ import ScrollReveal from "./ScrollReveal";
 
 const topics = [
   { icon: Droplets, title: "Marine Awareness", desc: "Understand and respect the marine ecosystem" },
-  { icon: Users, title: "Crowd Respect", desc: "Awareness of other surfers in the line-up" },
+  { icon: Users, title: "Inner Awareness", desc: "Awareness of your thoughts when there is a crowd in the line-up" },
   { icon: Compass, title: "Line-Up Etiquette", desc: "Know the unwritten rules of surfing" },
   { icon: Shell, title: "Ocean Knowledge", desc: "Deepen your connection with the water" },
 ];
