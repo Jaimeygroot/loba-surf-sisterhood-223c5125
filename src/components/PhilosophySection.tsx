@@ -17,7 +17,7 @@ export default function PhilosophySection() {
         alt=""
         className="absolute inset-0 w-full h-full object-cover object-[30%_10%]"
       />
-      <div className="absolute inset-0 bg-foreground/60" />
+      <div className="absolute inset-0 bg-foreground/45" />
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         <ScrollReveal>
