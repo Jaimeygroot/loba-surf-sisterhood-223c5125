@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Play, Target, BarChart3, BookOpen } from "lucide-react";
+import { Play, BarChart3, BookOpen } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const features = [
