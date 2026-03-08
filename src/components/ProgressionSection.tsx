@@ -1,8 +1,8 @@
 import ScrollReveal from "./ScrollReveal";
 
 const stages = [
-  { stage: "01", title: "Beginner Awareness", desc: "Understanding the basics of ocean safety, paddling, and catching your first waves." },
-  { stage: "02", title: "Ocean Reading", desc: "Learning to read swell, wind, and tide to find the best conditions." },
+  { stage: "01", title: "From Beginner to Advanced", desc: "From first waves to pushing your limits, our coaching guides you at every level." },
+  { stage: "02", title: "Forecast & Spot Reading", desc: "Learning to read swell, wind, and tide to find the best conditions." },
   { stage: "03", title: "Wave Selection", desc: "Choosing the right waves and positioning yourself in the line-up." },
   { stage: "04", title: "Flow & Confidence", desc: "Surfing with fluidity, trusting your instincts, and riding with the pack." },
 ];
