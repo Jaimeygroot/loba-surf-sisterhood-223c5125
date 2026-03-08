@@ -7,10 +7,11 @@ import Footer from "@/components/Footer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 import robinLane from "@/assets/robin-lane-graphics.jpg";
-import youngSurfers from "@/assets/young-surfers.jpg";
+import baliSurf from "@/assets/bali-surf.jpg";
 import beachCommunity from "@/assets/beach-community.jpg";
 import coachingOcean from "@/assets/coaching-ocean.jpg";
-import coachGirl from "@/assets/coach-girl.jpg";
+import skateBowl from "@/assets/skate-bowl.jpg";
+import kidsSurfing from "@/assets/kids-surfing.jpg";
 
 function StoryTab() {
   return (
