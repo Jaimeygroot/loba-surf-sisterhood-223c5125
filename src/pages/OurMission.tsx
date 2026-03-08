@@ -228,7 +228,7 @@ export default function OurMission() {
               How It All Started
             </span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mt-4">
-              How In-Water Trauma Transformed Into a Conscious Movement
+              From Lineup Trauma to Surf Sisterhood
             </h1>
           </motion.div>
         </div>
