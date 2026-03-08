@@ -63,7 +63,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-6 text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed"
+          className="mt-6 text-lg md:text-xl text-primary-foreground max-w-2xl mx-auto leading-relaxed bg-foreground/30 backdrop-blur-sm px-6 py-3 rounded-full inline-block"
         >
           Join the movement of conscious surfing.
         </motion.p>

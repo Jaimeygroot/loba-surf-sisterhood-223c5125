@@ -9,12 +9,12 @@ const steps = [
   },
   {
     icon: CloudSun,
-    title: "Forecast Training",
+    title: "Forecast Reading",
     items: ["Swell & wind reading", "Tide timing", "Spot selection"],
   },
   {
     icon: Users,
-    title: "Weekly Surf Sessions",
+    title: "Weekly Sessions",
     items: ["Water coaching", "Community vibe", "Faster progression"],
   },
 ];
