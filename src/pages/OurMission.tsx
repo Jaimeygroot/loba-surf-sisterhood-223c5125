@@ -228,20 +228,8 @@ export default function OurMission() {
       </section>
 
       {/* Tabs */}
-      <section className="pb-8 px-6 md:px-12 lg:px-20">
-        <div className="max-w-4xl mx-auto">
-          <Tabs defaultValue="story" className="w-full">
-            <TabsList className="w-full max-w-md">
-              <TabsTrigger value="story" className="flex-1">Story</TabsTrigger>
-              <TabsTrigger value="mission" className="flex-1">Mission</TabsTrigger>
-            </TabsList>
-          </Tabs>
-        </div>
-      </section>
-
-      {/* Content managed by URL or state - using simple tabs approach */}
       <Tabs defaultValue="story">
-        <section className="px-6 md:px-12 lg:px-20">
+        <section className="pb-8 px-6 md:px-12 lg:px-20">
           <div className="max-w-4xl mx-auto">
             <TabsList className="w-full max-w-md">
               <TabsTrigger value="story" className="flex-1">Story</TabsTrigger>
