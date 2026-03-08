@@ -9,7 +9,7 @@ const navItems = [
   { label: "Forecast", href: "/#forecast" },
   { label: "Book a Session", href: "/#sessions" },
   { label: "Meet-Up App", href: "/#meetup" },
-  { label: "About", href: "/#about" },
+  { label: "About", href: "/our-mission" },
 ];
 
 export default function Header() {
