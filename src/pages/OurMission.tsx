@@ -24,11 +24,11 @@ function StoryTab() {
               <p>
                 I started surfing in 2007. My older brother handed me a board that was way too big and way too thin, a board shaped for Hawaiian waves. My little brother and I paddled out almost every day after that. What started as curiosity quickly turned into a lifestyle. My younger brother would eventually become Dutch national champion, and I became one of the few girls in our village who kept going long enough to surf competitions.
               </p>
-              <p>
-                Over the years, surfing took me around the world. I've taught surf lessons for many different schools since 2010 in the Netherlands, France, Spain, Portugal, and Panama. My parents took us to Bali in 2009 and after that I knew one thing for sure: I wanted to travel more places like this. I traveled to Central America and through Europe, chasing waves and learning from different surf cultures and eventually fell in love with the Algarve, Portugal.
-              </p>
               <p className="font-heading font-bold text-foreground text-xl">
                 In 2013, I became the Dutch vice champion in longboarding.
+              </p>
+              <p>
+                Over the years, surfing took me around the world. I've taught surf lessons for many different schools since 2010 in the Netherlands, France, Spain, Portugal, and Panama. My parents took us to Bali in 2009 and after that I knew one thing for sure: I wanted to travel more places like this. I traveled to Central America and through Europe, chasing waves and learning from different surf cultures and eventually fell in love with the Algarve, Portugal.
               </p>
             </div>
           </ScrollReveal>
