@@ -33,7 +33,7 @@ export default function FinalCTASection() {
           Join the LOBA Girls Surf Club and become part of a surf sisterhood that grows together in and out of the water.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-          <Link to="/online-learning" className="bg-primary-foreground text-foreground px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity">
+          <Link to="/academy" className="bg-primary-foreground text-foreground px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity">
             Join the Movement
           </Link>
           <button

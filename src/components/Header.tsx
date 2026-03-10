@@ -7,10 +7,9 @@ import BookingDialog from "./BookingDialog";
 
 const navItems = [
   { label: "Home", href: "/#top" },
-  { label: "Online Coaching", href: "/#coaching" },
-  { label: "Forecast", href: "/#forecast" },
+  { label: "Online Coaching", href: "/academy" },
   { label: "Book a Session", href: "booking" },
-  { label: "About", href: "/our-mission" },
+  { label: "Mission", href: "/our-mission" },
 ];
 
 export default function Header() {
@@ -55,7 +54,7 @@ export default function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
             <img src={lobaLogo} alt="LOBA Girls Surf Club" className="h-12 w-12 md:h-14 md:w-14 rounded-full" />
           </Link>
 
@@ -70,12 +69,14 @@ export default function Header() {
                 {item.label}
               </button>
             ))}
-            <button
-              onClick={() => handleNavClick("/#join")}
+            <a
+              href="https://chat.whatsapp.com/GcTY9DCWCBeGSVwcnEhRE8?mode=gi_t"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-secondary text-secondary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
             >
-              Join the Movement
-            </button>
+              Get in Contact
+            </a>
           </nav>
 
           {/* Mobile trigger */}
@@ -106,12 +107,14 @@ export default function Header() {
                     {item.label}
                   </button>
                 ))}
-                <button
-                  onClick={() => handleNavClick("/#join")}
-                  className="bg-secondary text-secondary-foreground px-5 py-3 rounded-full text-sm font-semibold mt-2"
+                <a
+                  href="https://chat.whatsapp.com/GcTY9DCWCBeGSVwcnEhRE8?mode=gi_t"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-secondary text-secondary-foreground px-5 py-3 rounded-full text-sm font-semibold mt-2 text-center"
                 >
-                  Join the Movement
-                </button>
+                  Get in Contact
+                </a>
               </nav>
             </motion.div>
           )}

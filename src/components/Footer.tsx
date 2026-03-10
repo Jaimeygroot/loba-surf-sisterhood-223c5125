@@ -1,12 +1,12 @@
 import { Instagram, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 import lobaLogo from "@/assets/loba-logo.png";
 
 const links = [
   { label: "Home", href: "/#top" },
-  { label: "Online Coaching", href: "#coaching" },
-  { label: "Forecast", href: "#forecast" },
+  { label: "Online Coaching", href: "/academy" },
   { label: "Book a Session", href: "#sessions" },
-  { label: "About", href: "#about" },
+  { label: "Mission", href: "/our-mission" },
 ];
 
 export default function Footer() {
@@ -14,10 +14,9 @@ export default function Footer() {
     <footer className="bg-foreground text-background py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start gap-10">
-          <div className="flex items-center gap-3">
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-3">
             <img src={lobaLogo} alt="LOBA" className="h-10 w-10 rounded-full" />
-            <span className="font-heading font-bold text-lg">LOBA Girls Surf Club</span>
-          </div>
+          </Link>
 
           <nav className="flex flex-wrap gap-x-8 gap-y-3">
             {links.map((l) => (
@@ -37,6 +36,14 @@ export default function Footer() {
             </a>
             <a href="#" className="text-background/60 hover:text-background transition-colors">
               <Youtube size={20} />
+            </a>
+            <a
+              href="https://chat.whatsapp.com/GcTY9DCWCBeGSVwcnEhRE8?mode=gi_t"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-background/60 hover:text-background transition-colors font-semibold bg-background/10 px-4 py-1 rounded-full"
+            >
+              Get in Contact
             </a>
           </div>
         </div>
