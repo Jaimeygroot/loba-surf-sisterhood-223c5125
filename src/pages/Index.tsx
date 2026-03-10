@@ -5,9 +5,7 @@ import SisterhoodSection from "@/components/SisterhoodSection";
 import MissionSection from "@/components/MissionSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import CoachingSection from "@/components/CoachingSection";
-import ForecastSection from "@/components/ForecastSection";
 import SessionsSection from "@/components/SessionsSection";
-
 import ConsciousSection from "@/components/ConsciousSection";
 import ProgressionSection from "@/components/ProgressionSection";
 import ResultsSection from "@/components/ResultsSection";
@@ -25,11 +23,9 @@ const Index = () => {
       <MissionSection />
       <HowItWorksSection />
       <CoachingSection />
-      <ForecastSection />
       <SessionsSection />
       <ConsciousSection />
       <ProgressionSection />
-      
       <ResultsSection />
       <AboutSection />
       <FinalCTASection />
