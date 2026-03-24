@@ -7,8 +7,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LeadDialog from "@/components/LeadDialog";
 import lobaLogo from "@/assets/loba-logo.png";
-import academyPhoto1 from "@/assets/academy-photo-1.jpg";
-import academyPhoto2 from "@/assets/academy-photo-2.jpg";
 
 const modules = [
   {
