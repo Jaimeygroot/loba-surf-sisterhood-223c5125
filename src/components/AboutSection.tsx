@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
-import coachGirl from "@/assets/coach-girl.jpg";
 
 export default function AboutSection() {
   return (
     <section id="about" className="section-padding bg-muted">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <span className="text-sm font-semibold tracking-widest uppercase text-secondary">
             About LOBA
@@ -30,16 +29,6 @@ export default function AboutSection() {
             Read More About Our Mission
             <ArrowRight size={16} />
           </Link>
-        </ScrollReveal>
-
-        <ScrollReveal delay={0.2}>
-          <div className="overflow-hidden rounded-3xl relative">
-            <img
-              src={coachGirl}
-              alt="LOBA coach with young surfer"
-              className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
-            />
-          </div>
         </ScrollReveal>
       </div>
     </section>

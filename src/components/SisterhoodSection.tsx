@@ -1,22 +1,11 @@
 import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
-import sisterhoodImg from "@/assets/power-of-pack.jpg";
 
 export default function SisterhoodSection() {
   return (
     <section className="section-padding bg-muted">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-4xl mx-auto">
         <ScrollReveal>
-          <div className="overflow-hidden rounded-3xl">
-            <img
-              src={sisterhoodImg}
-              alt="LOBA surf sisterhood - women surfing together"
-              className="w-full h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
-            />
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal delay={0.2}>
           <span className="text-sm font-semibold tracking-widest uppercase text-secondary">
             Sisterhood
           </span>
