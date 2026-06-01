@@ -1,47 +1,11 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import heroPoster from "@/assets/hero-poster.webp.asset.json";
+import heroVideo from "@/assets/hero-video.mp4.asset.json";
 
 export default function HeroSection() {
   const [videoReady, setVideoReady] = useState(false);
-  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-
-  useEffect(() => {
-    const loadVideo = () => setShouldLoadVideo(true);
-    const requestIdle = window.requestIdleCallback?.bind(window);
-    const cancelIdle = window.cancelIdleCallback?.bind(window);
-
-    if (requestIdle && cancelIdle) {
-      const idleId = requestIdle(loadVideo, { timeout: 800 });
-      return () => cancelIdle(idleId);
-    }
-
-    const timeoutId = window.setTimeout(loadVideo, 120);
-    return () => window.clearTimeout(timeoutId);
-  }, []);
-
-  useEffect(() => {
-    if (!shouldLoadVideo) return;
-
-    // Listen for Vimeo player "playing" event so we only fade in once a frame is actually showing
-    const onMessage = (event: MessageEvent) => {
-      if (typeof event.data !== "string" || !event.origin.includes("vimeo.com")) return;
-      try {
-        const data = JSON.parse(event.data);
-        if (data.event === "ready" && iframeRef.current?.contentWindow) {
-          iframeRef.current.contentWindow.postMessage(
-            JSON.stringify({ method: "addEventListener", value: "playing" }),
-            "*"
-          );
-        }
-        if (data.event === "playing") setVideoReady(true);
-      } catch {}
-    };
-    window.addEventListener("message", onMessage);
-    return () => window.removeEventListener("message", onMessage);
-  }, [shouldLoadVideo]);
 
   return (
     <section id="top" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
@@ -54,20 +18,19 @@ export default function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 
-      {/* Vimeo background video */}
-      {shouldLoadVideo ? (
-        <div className={`absolute inset-0 z-[1] transition-opacity duration-700 ${videoReady ? "opacity-100" : "opacity-0"}`}>
-          <iframe
-            ref={iframeRef}
-            src="https://player.vimeo.com/video/956967522?h=758f3b5591&background=1&autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0&api=1"
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto"
-            style={{ aspectRatio: "16/9" }}
-            allow="autoplay; fullscreen"
-            frameBorder="0"
-            loading="eager"
-          />
-        </div>
-      ) : null}
+      {/* Native background video */}
+      <video
+        className={`absolute inset-0 w-full h-full object-cover z-[1] transition-opacity duration-700 ${videoReady ? "opacity-100" : "opacity-0"}`}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster={heroPoster.url}
+        onLoadedData={() => setVideoReady(true)}
+      >
+        <source src={heroVideo.url} type="video/mp4" />
+      </video>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-deep-ocean/10 via-transparent to-deep-ocean/20 z-[2]" />
