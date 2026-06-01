@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import heroPoster from "@/assets/hero-poster.png.asset.json";
+import heroPoster from "@/assets/hero-poster.webp.asset.json";
 
 export default function HeroSection() {
   const [videoReady, setVideoReady] = useState(false);
