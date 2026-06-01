@@ -10,10 +10,12 @@ export default function HeroSection() {
 
   useEffect(() => {
     const loadVideo = () => setShouldLoadVideo(true);
+    const requestIdle = window.requestIdleCallback?.bind(window);
+    const cancelIdle = window.cancelIdleCallback?.bind(window);
 
-    if ("requestIdleCallback" in window) {
-      const idleId = window.requestIdleCallback(loadVideo, { timeout: 800 });
-      return () => window.cancelIdleCallback(idleId);
+    if (requestIdle && cancelIdle) {
+      const idleId = requestIdle(loadVideo, { timeout: 800 });
+      return () => cancelIdle(idleId);
     }
 
     const timeoutId = window.setTimeout(loadVideo, 120);
