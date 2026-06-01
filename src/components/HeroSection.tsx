@@ -1,22 +1,37 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import heroPoster from "@/assets/hero-poster.png.asset.json";
 
 export default function HeroSection() {
+  const [videoReady, setVideoReady] = useState(false);
+
   return (
     <section id="top" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+      {/* Poster image — shown immediately while the video loads */}
+      <img
+        src={heroPoster.url}
+        alt=""
+        aria-hidden="true"
+        fetchPriority="high"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      />
+
       {/* Vimeo background video */}
-      <div className="absolute inset-0 z-0">
+      <div className={`absolute inset-0 z-[1] transition-opacity duration-700 ${videoReady ? "opacity-100" : "opacity-0"}`}>
         <iframe
           src="https://player.vimeo.com/video/956967522?h=758f3b5591&background=1&autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0"
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto"
           style={{ aspectRatio: "16/9" }}
           allow="autoplay; fullscreen"
           frameBorder="0"
+          loading="eager"
+          onLoad={() => setVideoReady(true)}
         />
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-deep-ocean/10 via-transparent to-deep-ocean/20 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-deep-ocean/10 via-transparent to-deep-ocean/20 z-[2]" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto -mt-8">
