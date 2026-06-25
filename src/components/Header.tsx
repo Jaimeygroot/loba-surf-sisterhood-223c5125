@@ -17,6 +17,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [bookingOpen, setBookingOpen] = useState(false);
+  const [leadOpen, setLeadOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
