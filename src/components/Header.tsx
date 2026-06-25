@@ -118,7 +118,7 @@ export default function Header() {
                 ))}
                 <button
                   onClick={() => { setMobileOpen(false); setLeadOpen(true); }}
-                  className="bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-semibold mt-2 text-center"
+                  className="bg-lavender text-primary-foreground px-5 py-3 rounded-full text-sm font-semibold mt-2 text-center"
                 >
                   Join the Pack
                 </button>
@@ -126,7 +126,7 @@ export default function Header() {
                   href="https://chat.whatsapp.com/GcTY9DCWCBeGSVwcnEhRE8?mode=gi_t"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-secondary text-secondary-foreground px-5 py-3 rounded-full text-sm font-semibold text-center"
+                  className="bg-foreground text-background px-5 py-3 rounded-full text-sm font-semibold text-center"
                 >
                   Get in Contact
                 </a>
