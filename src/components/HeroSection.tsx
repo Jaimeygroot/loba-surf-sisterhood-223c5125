@@ -136,7 +136,7 @@ export default function HeroSection() {
             to="/academy"
             className="bg-lavender text-primary-foreground px-8 py-4 rounded-full font-bold text-base hover:bg-foreground hover:text-background transition-colors"
           >
-            Join the Movement
+            Join the Pack
           </Link>
           <a
             href="#coaching"
