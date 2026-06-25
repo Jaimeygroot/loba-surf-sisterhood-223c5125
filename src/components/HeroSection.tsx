@@ -1,10 +1,34 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import heroBg from "@/assets/hero-bg.png";
+import heroVideo from "@/assets/hero-video.mp4.asset.json";
 
 export default function HeroSection() {
   const [videoReady, setVideoReady] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const mql = window.matchMedia("(max-width: 768px)");
+    const update = () => setIsMobile(mql.matches);
+    update();
+    mql.addEventListener("change", update);
+    return () => mql.removeEventListener("change", update);
+  }, []);
+
+  // Ensure autoplay kicks in on mobile Safari/Chrome
+  useEffect(() => {
+    if (!isMobile) return;
+    const v = videoRef.current;
+    if (!v) return;
+    const tryPlay = () => {
+      v.play().catch(() => {});
+    };
+    tryPlay();
+    document.addEventListener("touchstart", tryPlay, { once: true, passive: true });
+    return () => document.removeEventListener("touchstart", tryPlay);
+  }, [isMobile]);
 
   return (
     <section id="top" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
@@ -17,19 +41,35 @@ export default function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 
-      {/* Vimeo background video — fades in only after it has loaded, leaving the photo visible as fallback */}
+      {/* Background video — native on mobile (reliable autoplay), Vimeo on desktop */}
       <div
         className={`absolute inset-0 z-[1] transition-opacity duration-700 ${videoReady ? "opacity-100" : "opacity-0"}`}
         aria-hidden="true"
       >
-        <iframe
-          src="https://player.vimeo.com/video/956967522?h=758f3b5591&background=1&autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0"
-          title="LOBA surf background video"
-          loading="eager"
-          allow="autoplay; fullscreen; picture-in-picture"
-          onLoad={() => setVideoReady(true)}
-          className="absolute top-1/2 left-1/2 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2 border-0"
-        />
+        {isMobile ? (
+          <video
+            ref={videoRef}
+            src={heroVideo.url}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster={heroBg}
+            onLoadedData={() => setVideoReady(true)}
+            onCanPlay={() => setVideoReady(true)}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        ) : (
+          <iframe
+            src="https://player.vimeo.com/video/956967522?h=758f3b5591&background=1&autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0"
+            title="LOBA surf background video"
+            loading="eager"
+            allow="autoplay; fullscreen; picture-in-picture"
+            onLoad={() => setVideoReady(true)}
+            className="absolute top-1/2 left-1/2 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2 border-0"
+          />
+        )}
       </div>
 
       {/* Overlay */}
