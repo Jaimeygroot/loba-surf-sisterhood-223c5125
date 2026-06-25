@@ -71,6 +71,12 @@ export default function Header() {
                 {item.label}
               </button>
             ))}
+            <button
+              onClick={() => setLeadOpen(true)}
+              className="bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
+            >
+              Join the Pack
+            </button>
             <a
               href="https://chat.whatsapp.com/GcTY9DCWCBeGSVwcnEhRE8?mode=gi_t"
               target="_blank"
