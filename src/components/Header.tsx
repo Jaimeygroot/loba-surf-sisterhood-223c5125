@@ -136,6 +136,7 @@ export default function Header() {
       </header>
 
       <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
+      <LeadDialog open={leadOpen} onOpenChange={setLeadOpen} />
     </>
   );
 }
