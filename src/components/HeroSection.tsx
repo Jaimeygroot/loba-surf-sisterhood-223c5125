@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import heroPoster from "@/assets/hero-poster.webp.asset.json";
-import heroVideo from "@/assets/hero-video.mp4.asset.json";
+import heroBg from "@/assets/hero-bg.png";
 
 export default function HeroSection() {
   const [videoReady, setVideoReady] = useState(false);
@@ -11,26 +10,27 @@ export default function HeroSection() {
     <section id="top" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       {/* Poster image — shown immediately while the video loads */}
       <img
-        src={heroPoster.url}
+        src={heroBg}
         alt=""
         aria-hidden="true"
         {...({ fetchpriority: "high" } as Record<string, string>)}
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 
-      {/* Native background video */}
-      <video
-        className={`absolute inset-0 w-full h-full object-cover z-[1] transition-opacity duration-700 ${videoReady ? "opacity-100" : "opacity-0"}`}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster={heroPoster.url}
-        onLoadedData={() => setVideoReady(true)}
+      {/* Vimeo background video — fades in only after it has loaded, leaving the photo visible as fallback */}
+      <div
+        className={`absolute inset-0 z-[1] transition-opacity duration-700 ${videoReady ? "opacity-100" : "opacity-0"}`}
+        aria-hidden="true"
       >
-        <source src={heroVideo.url} type="video/mp4" />
-      </video>
+        <iframe
+          src="https://player.vimeo.com/video/956967522?h=758f3b5591&background=1&autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0"
+          title="LOBA surf background video"
+          loading="eager"
+          allow="autoplay; fullscreen; picture-in-picture"
+          onLoad={() => setVideoReady(true)}
+          className="absolute top-1/2 left-1/2 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2 border-0"
+        />
+      </div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-deep-ocean/10 via-transparent to-deep-ocean/20 z-[2]" />
