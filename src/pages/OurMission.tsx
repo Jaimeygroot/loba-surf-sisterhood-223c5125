@@ -97,9 +97,6 @@ function StoryTab() {
           <ScrollReveal delay={0.2}>
             <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Today, I live in Portugal where I coach a close-knit surf community of more than 50 women from all over the world. Our ages range from 8 to 80, and what connects us isn't competition, but encouragement, growth, and joy in the water.
-              </p>
-              <p>
                 For years, women in my community kept asking me the same question:
               </p>
               <blockquote className="pl-6 border-l-4 border-secondary">
