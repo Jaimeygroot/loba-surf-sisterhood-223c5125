@@ -231,7 +231,7 @@ export default function Academy() {
         <ScrollReveal>
           <h2 className="font-heading text-3xl md:text-5xl font-bold">Ready to Level Up?</h2>
           <p className="mt-6 text-lg text-primary-foreground/70 max-w-xl mx-auto">
-            Join the LOBA Academy and start your surf progression journey today.
+            Join the Loba Academy and start your surf progression journey today.
           </p>
           <button
             onClick={() => setLeadOpen(true)}
