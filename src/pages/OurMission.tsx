@@ -247,7 +247,7 @@ export default function OurMission() {
             href="/#join"
             className="inline-block bg-lavender text-primary-foreground px-8 py-4 rounded-full font-bold text-base hover:bg-foreground hover:text-background transition-colors"
           >
-            Join the Movement
+            Join the Pack
           </a>
         </ScrollReveal>
       </section>
