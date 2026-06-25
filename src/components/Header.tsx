@@ -67,7 +67,7 @@ export default function Header() {
                 key={item.label}
                 onClick={() => handleNavClick(item.href)}
                 className="text-sm font-medium transition-opacity hover:opacity-80 text-lavender"
-                style={{ textShadow: "0 0 6px rgba(255,255,255,0.9), 0 0 2px rgba(255,255,255,1)" }}
+                style={{ textShadow: "1px 1px 2px rgba(255,255,255,0.95)" }}
               >
                 {item.label}
               </button>
