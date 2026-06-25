@@ -19,10 +19,7 @@ function StoryTab() {
           <ScrollReveal>
             <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I started surfing in 2007. My older brother handed me a board that was way too big and way too thin, a board shaped for Hawaiian waves. My little brother and I paddled out almost every day after that. What started as curiosity quickly turned into a lifestyle. My younger brother would eventually become Dutch national champion, and I became one of the few girls in our village who kept going long enough to surf competitions.
-              </p>
-              <p className="font-heading font-bold text-foreground text-xl">
-                In 2013, I became the Dutch vice champion in longboarding.
+                I started surfing in 2007. My older brother handed me a board that was way too big and way too thin, a board shaped for Hawaiian waves. My little brother and I paddled out almost every day after that. What started as curiosity quickly turned into a lifestyle. My younger brother would eventually become Dutch national champion, and I became one of the few girls in our village who kept going long enough to surf competitions. I became the Dutch vice champion in longboarding.
               </p>
               <p>
                 My parents took us to Bali in 2009 and after that I knew one thing for sure: I wanted to travel more places like this. I traveled to Central America and through Europe, chasing waves and learning from different surf cultures and eventually fell in love with the Algarve, Portugal.
