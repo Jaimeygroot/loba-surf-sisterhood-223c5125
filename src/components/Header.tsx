@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import lobaLogo from "@/assets/loba-logo.png";
 import BookingDialog from "./BookingDialog";
+import LeadDialog from "./LeadDialog";
 
 const navItems = [
   { label: "Home", href: "/#top" },
@@ -16,6 +17,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [bookingOpen, setBookingOpen] = useState(false);
+  const [leadOpen, setLeadOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -69,6 +71,12 @@ export default function Header() {
                 {item.label}
               </button>
             ))}
+            <button
+              onClick={() => setLeadOpen(true)}
+              className="bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
+            >
+              Join the Pack
+            </button>
             <a
               href="https://chat.whatsapp.com/GcTY9DCWCBeGSVwcnEhRE8?mode=gi_t"
               target="_blank"
@@ -107,11 +115,17 @@ export default function Header() {
                     {item.label}
                   </button>
                 ))}
+                <button
+                  onClick={() => { setMobileOpen(false); setLeadOpen(true); }}
+                  className="bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-semibold mt-2 text-center"
+                >
+                  Join the Pack
+                </button>
                 <a
                   href="https://chat.whatsapp.com/GcTY9DCWCBeGSVwcnEhRE8?mode=gi_t"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-secondary text-secondary-foreground px-5 py-3 rounded-full text-sm font-semibold mt-2 text-center"
+                  className="bg-secondary text-secondary-foreground px-5 py-3 rounded-full text-sm font-semibold text-center"
                 >
                   Get in Contact
                 </a>
@@ -122,6 +136,7 @@ export default function Header() {
       </header>
 
       <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
+      <LeadDialog open={leadOpen} onOpenChange={setLeadOpen} />
     </>
   );
 }
