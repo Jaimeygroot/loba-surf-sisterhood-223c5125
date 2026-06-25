@@ -209,21 +209,31 @@ export default function OurMission() {
       </section>
 
       {/* Tabs */}
-      <Tabs defaultValue="story">
+      <Tabs defaultValue="mission">
         <section className="pb-8 px-6 md:px-12 lg:px-20">
           <div className="max-w-4xl mx-auto">
-            <TabsList className="w-full max-w-md">
-              <TabsTrigger value="story" className="flex-1">Story</TabsTrigger>
-              <TabsTrigger value="mission" className="flex-1">Mission</TabsTrigger>
+            <TabsList className="bg-transparent p-0 gap-3 h-auto justify-start">
+              <TabsTrigger
+                value="mission"
+                className="bg-foreground text-background rounded-full px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=inactive]:opacity-60 hover:opacity-100 transition-opacity"
+              >
+                Mission
+              </TabsTrigger>
+              <TabsTrigger
+                value="story"
+                className="bg-foreground text-background rounded-full px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=inactive]:opacity-60 hover:opacity-100 transition-opacity"
+              >
+                Story
+              </TabsTrigger>
             </TabsList>
           </div>
         </section>
 
-        <TabsContent value="story">
-          <StoryTab />
-        </TabsContent>
         <TabsContent value="mission">
           <MissionTab />
+        </TabsContent>
+        <TabsContent value="story">
+          <StoryTab />
         </TabsContent>
       </Tabs>
 
