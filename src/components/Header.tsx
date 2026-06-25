@@ -57,7 +57,7 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-3" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            <img src={lobaLogo} alt="LOBA Girls Surf Club" className="h-12 w-12 md:h-14 md:w-14 rounded-full" />
+            <img src={lobaLogo} alt="LOBA Girls Surf Club" className="h-24 w-24 md:h-28 md:w-28 object-contain" />
           </Link>
 
           {/* Desktop nav */}
@@ -66,14 +66,15 @@ export default function Header() {
               <button
                 key={item.label}
                 onClick={() => handleNavClick(item.href)}
-                className={`text-sm font-medium transition-colors hover:text-lavender ${scrolled ? 'text-lavender' : 'text-primary-foreground'}`}
+                className="text-sm font-medium transition-opacity hover:opacity-80 text-lavender"
+                style={{ textShadow: "0 0 6px rgba(255,255,255,0.9), 0 0 2px rgba(255,255,255,1)" }}
               >
                 {item.label}
               </button>
             ))}
             <button
               onClick={() => setLeadOpen(true)}
-              className="bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
+              className="bg-lavender text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
             >
               Join the Pack
             </button>
@@ -81,7 +82,7 @@ export default function Header() {
               href="https://chat.whatsapp.com/GcTY9DCWCBeGSVwcnEhRE8?mode=gi_t"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-secondary text-secondary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
+              className="bg-foreground text-background px-5 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
             >
               Get in Contact
             </a>
@@ -117,7 +118,7 @@ export default function Header() {
                 ))}
                 <button
                   onClick={() => { setMobileOpen(false); setLeadOpen(true); }}
-                  className="bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-semibold mt-2 text-center"
+                  className="bg-lavender text-primary-foreground px-5 py-3 rounded-full text-sm font-semibold mt-2 text-center"
                 >
                   Join the Pack
                 </button>
@@ -125,7 +126,7 @@ export default function Header() {
                   href="https://chat.whatsapp.com/GcTY9DCWCBeGSVwcnEhRE8?mode=gi_t"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-secondary text-secondary-foreground px-5 py-3 rounded-full text-sm font-semibold text-center"
+                  className="bg-foreground text-background px-5 py-3 rounded-full text-sm font-semibold text-center"
                 >
                   Get in Contact
                 </a>

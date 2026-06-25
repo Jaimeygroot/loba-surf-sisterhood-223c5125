@@ -27,14 +27,14 @@ export default function FinalCTASection() {
         className="relative z-10 text-center max-w-3xl mx-auto"
       >
         <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground">
-          Join the Movement
+          Join the Pack
         </h2>
         <p className="mt-6 text-lg text-primary-foreground/80 max-w-xl mx-auto">
           Join the LOBA Girls Surf Club and become part of a surf sisterhood that grows together in and out of the water.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
           <Link to="/academy" className="bg-primary-foreground text-foreground px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity">
-            Join the Movement
+            Join the Pack
           </Link>
           <button
             onClick={() => setBookingOpen(true)}

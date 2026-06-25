@@ -97,9 +97,6 @@ function StoryTab() {
           <ScrollReveal delay={0.2}>
             <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Today, I live in Portugal where I coach a close-knit surf community of more than 50 women from all over the world. Our ages range from 8 to 80, and what connects us isn't competition, but encouragement, growth, and joy in the water.
-              </p>
-              <p>
                 For years, women in my community kept asking me the same question:
               </p>
               <blockquote className="pl-6 border-l-4 border-secondary">
@@ -212,21 +209,31 @@ export default function OurMission() {
       </section>
 
       {/* Tabs */}
-      <Tabs defaultValue="story">
+      <Tabs defaultValue="mission">
         <section className="pb-8 px-6 md:px-12 lg:px-20">
           <div className="max-w-4xl mx-auto">
-            <TabsList className="w-full max-w-md">
-              <TabsTrigger value="story" className="flex-1">Story</TabsTrigger>
-              <TabsTrigger value="mission" className="flex-1">Mission</TabsTrigger>
+            <TabsList className="bg-transparent p-0 gap-3 h-auto justify-start">
+              <TabsTrigger
+                value="mission"
+                className="bg-foreground text-background rounded-full px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=inactive]:opacity-60 hover:opacity-100 transition-opacity"
+              >
+                Mission
+              </TabsTrigger>
+              <TabsTrigger
+                value="story"
+                className="bg-foreground text-background rounded-full px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-foreground data-[state=active]:text-background data-[state=inactive]:opacity-60 hover:opacity-100 transition-opacity"
+              >
+                Story
+              </TabsTrigger>
             </TabsList>
           </div>
         </section>
 
-        <TabsContent value="story">
-          <StoryTab />
-        </TabsContent>
         <TabsContent value="mission">
           <MissionTab />
+        </TabsContent>
+        <TabsContent value="story">
+          <StoryTab />
         </TabsContent>
       </Tabs>
 
@@ -240,7 +247,7 @@ export default function OurMission() {
             href="/#join"
             className="inline-block bg-lavender text-primary-foreground px-8 py-4 rounded-full font-bold text-base hover:bg-foreground hover:text-background transition-colors"
           >
-            Join the Movement
+            Join the Pack
           </a>
         </ScrollReveal>
       </section>

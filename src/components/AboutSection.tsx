@@ -17,7 +17,7 @@ export default function AboutSection() {
             The name LOBA is inspired by <em>Women Who Run With the Wolves</em> by Clarissa Pinkola Estés. The wolf represents intuition, freedom, instinct and community.
           </p>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            The surfer is like the wolf — she listens to the environment, moves with nature, and trusts her instincts.
+            The surfer is like the wolf; she listens to the environment, moves with nature, and trusts her instincts.
           </p>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
             Online learning gives you knowledge of the ocean, techniques and home practices. Weekly sessions turn that knowledge into real skills.

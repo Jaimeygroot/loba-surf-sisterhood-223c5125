@@ -93,8 +93,8 @@ export default function Academy() {
 
             <div className="text-center max-w-2xl mx-auto">
               <img src={lobaLogo} alt="LOBA" className="h-20 w-20 rounded-full mx-auto mb-4" />
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground italic">
-                LOBA Academy
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+                Loba Academy
               </h1>
               <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 Your online surf training platform. Learn to read forecasts and plan the best moments for your sessions, practice techniques from anywhere, get personalized feedback, meet up with other women and progress faster!
@@ -112,7 +112,7 @@ export default function Academy() {
               Online Coaching
             </span>
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground mt-4">
-              Train As You Like — Anywhere
+              Train As You Like, Anywhere
             </h2>
             <p className="mt-6 text-lg text-secondary-foreground/80 max-w-2xl mx-auto">
               Members get access to a digital surf training platform with coaching tools designed to accelerate your progression — and connect with your surf sisters through the built-in Meet-Up feature.
@@ -231,7 +231,7 @@ export default function Academy() {
         <ScrollReveal>
           <h2 className="font-heading text-3xl md:text-5xl font-bold">Ready to Level Up?</h2>
           <p className="mt-6 text-lg text-primary-foreground/70 max-w-xl mx-auto">
-            Join the LOBA Academy and start your surf progression journey today.
+            Join the Loba Academy and start your surf progression journey today.
           </p>
           <button
             onClick={() => setLeadOpen(true)}
