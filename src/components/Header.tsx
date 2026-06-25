@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import lobaLogo from "@/assets/loba-logo.png";
 import BookingDialog from "./BookingDialog";
+import LeadDialog from "./LeadDialog";
 
 const navItems = [
   { label: "Home", href: "/#top" },
