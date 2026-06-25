@@ -14,7 +14,7 @@ export default function AboutSection() {
             Women Who Run With the Wolves
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            The name LOBA is inspired by <em>Women Who Run With the Wolves</em> by Clarissa Pinkola Estés. The wolf represents intuition, freedom, instinct and community.
+            The name 'Loba' is inspired by <em>Women Who Run With the Wolves</em> by Clarissa Pinkola Estés. It means wolf. The wolf represents intuition, freedom, instinct and community.
           </p>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
             The surfer is like the wolf; she listens to the environment, moves with nature, and trusts her instincts.
