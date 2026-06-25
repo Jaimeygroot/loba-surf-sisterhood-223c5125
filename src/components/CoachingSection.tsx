@@ -23,7 +23,7 @@ export default function CoachingSection() {
             Train As You Like, Anywhere
           </h2>
           <p className="mt-6 text-lg text-secondary-foreground/80 max-w-2xl mx-auto">
-            Members get access to a digital surf training platform with coaching tools designed to accelerate your progression — and connect with your surf sisters through the built-in Meet-Up feature.
+            Members get access to a digital surf training platform with coaching tools designed to accelerate your progression and connect with your surf sisters through the built-in Meet-Up feature.
           </p>
         </ScrollReveal>
 
